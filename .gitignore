@@ -1,0 +1,11 @@
+# Laravel backend ignores
+JK/vendor/
+JK/.env
+JK/bootstrap/cache/
+JK/storage/*.key
+JK/storage/framework/
+
+# React frontend ignores
+suberlab-froentend/node_modules/
+suberlab-froentend/dist/
+suberlab-froentend/.env.local
