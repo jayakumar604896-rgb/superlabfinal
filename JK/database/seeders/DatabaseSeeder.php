@@ -26,6 +26,7 @@ class DatabaseSeeder extends Seeder
             ServiceReviewSeeder::class,
             CustomerSeeder::class,
             PaymentGatewaySeeder::class,
+            FooterLocationSeeder::class,
         ]);
     }
 }

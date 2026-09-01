@@ -40,6 +40,7 @@ class RoleAndPermissionSeeder extends Seeder
             'manage payment gateways',
             'manage coupons',
             'manage service reviews',
+            'manage footer locations',
         ];
 
         // Create permissions
@@ -69,6 +70,7 @@ class RoleAndPermissionSeeder extends Seeder
             'manage testimonials',
             'manage settings',
             'manage locations',
+            'manage footer locations',
             'manage packages',
             'manage payment types',
             'manage bookings',
@@ -90,6 +92,7 @@ class RoleAndPermissionSeeder extends Seeder
             'manage testimonials',
             'manage service reviews',
             'manage locations',
+            'manage footer locations',
             'manage packages',
             'manage payment types',
             'manage bookings',

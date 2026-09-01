@@ -23,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
         $this->app->bind(\App\Repositories\Contracts\SettingRepositoryInterface::class, \App\Repositories\Eloquent\SettingRepository::class);
         $this->app->bind(\App\Repositories\Contracts\ActivityLogRepositoryInterface::class, \App\Repositories\Eloquent\ActivityLogRepository::class);
         $this->app->bind(\App\Repositories\Contracts\LocationRepositoryInterface::class, \App\Repositories\Eloquent\LocationRepository::class);
+        $this->app->bind(\App\Repositories\Contracts\FooterLocationRepositoryInterface::class, \App\Repositories\Eloquent\FooterLocationRepository::class);
         $this->app->bind(\App\Repositories\Contracts\PackageRepositoryInterface::class, \App\Repositories\Eloquent\PackageRepository::class);
         $this->app->bind(\App\Repositories\Contracts\PaymentTypeRepositoryInterface::class, \App\Repositories\Eloquent\PaymentTypeRepository::class);
         $this->app->bind(\App\Repositories\Contracts\BookingRepositoryInterface::class, \App\Repositories\Eloquent\BookingRepository::class);

@@ -400,6 +400,14 @@
                 </li>
                 @endcan
 
+                @can('manage footer locations')
+                <li class="{{ Request::routeIs('admin.footer-locations.*') ? 'active' : '' }}">
+                    <a href="{{ route('admin.footer-locations.index') }}">
+                        <i class="fa-solid fa-map-location-dot"></i> Footer Locations
+                    </a>
+                </li>
+                @endcan
+
                 @can('manage settings')
                 <li class="{{ Request::routeIs('admin.settings.*') ? 'active' : '' }}">
                     <a href="{{ route('admin.settings.index') }}">

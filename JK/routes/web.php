@@ -37,6 +37,8 @@ use App\Http\Controllers\Admin\ServiceReviewController;
 use App\Http\Controllers\Api\CustomPackageApiController;
 use App\Http\Controllers\Api\ServiceReviewApiController;
 use App\Http\Controllers\Admin\CustomerController;
+use App\Http\Controllers\Admin\FooterLocationController;
+use App\Http\Controllers\Api\FooterLocationApiController;
 
 Route::get('/', function () {
     return redirect()->route('login');
@@ -116,6 +118,11 @@ Route::group(['prefix' => 'admin', 'as' => 'admin.', 'middleware' => ['auth']], 
     Route::delete('/locations/{id}/force', [LocationController::class, 'forceDelete'])->name('locations.force-delete');
     Route::resource('/locations', LocationController::class);
 
+    // Footer Locations
+    Route::post('/footer-locations/{id}/restore', [FooterLocationController::class, 'restore'])->name('footer-locations.restore');
+    Route::delete('/footer-locations/{id}/force', [FooterLocationController::class, 'forceDelete'])->name('footer-locations.force-delete');
+    Route::resource('/footer-locations', FooterLocationController::class);
+
     // Packages
     Route::post('/packages/{id}/restore', [PackageController::class, 'restore'])->name('packages.restore');
     Route::delete('/packages/{id}/force', [PackageController::class, 'forceDelete'])->name('packages.force-delete');
@@ -178,6 +185,7 @@ Route::group(['prefix' => 'api/v1'], function () {
     Route::get('/packages/{slug}', [PackageApiController::class, 'show']);
 
     Route::get('/testimonials', [TestimonialApiController::class, 'index']);
+    Route::get('/footer-locations', [FooterLocationApiController::class, 'index']);
 
     Route::get('/reviews', [ServiceReviewApiController::class, 'index']);
     Route::post('/reviews', [ServiceReviewApiController::class, 'store'])

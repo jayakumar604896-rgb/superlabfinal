@@ -180,6 +180,13 @@ export async function fetchCategories() {
 }
 
 /**
+ * Get Footer Locations
+ */
+export async function fetchFooterLocations() {
+  return fetchWithFallback('/footer-locations', []);
+}
+
+/**
  * Get Test Categories (Specific for All Categories page)
  */
 export async function fetchTestCategories() {
