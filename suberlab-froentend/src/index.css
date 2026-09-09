@@ -129,6 +129,63 @@ a {
   color: #ffffff;
 }
 
+/* Mobile Only Top Contact Bar (Call & WhatsApp) */
+.mobile-top-contact-bar {
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(90deg, #003c71 0%, #005696 100%);
+  padding: 8px 12px;
+  gap: 10px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  width: 100%;
+}
+
+.mobile-top-contact-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 7px 14px;
+  border-radius: 20px;
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  flex: 1;
+  max-width: 200px;
+  white-space: nowrap;
+}
+
+.mobile-call-btn {
+  background-color: #ffffff;
+  color: #003c71;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-call-btn:active, .mobile-call-btn:hover {
+  background-color: #f1f5f9;
+  transform: translateY(-1px);
+}
+
+.mobile-wa-btn {
+  background-color: #25D366;
+  color: #ffffff;
+  box-shadow: 0 2px 6px rgba(37, 211, 102, 0.3);
+}
+
+.mobile-wa-btn:active, .mobile-wa-btn:hover {
+  background-color: #20bd5a;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 992px) {
+  .mobile-top-contact-bar {
+    display: flex !important;
+  }
+}
+
 .header-top-bar {
   background-color: var(--blue-soft);
   padding: 10px clamp(12px, 2vw, 24px);

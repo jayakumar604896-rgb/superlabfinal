@@ -38,7 +38,7 @@ if (typeof window !== 'undefined') {
           return `superlab_cart_user_${parsed.id}`;
         }
       }
-    } catch (e) {}
+    } catch (e) { }
     return 'superlab_cart_guest';
   };
 
@@ -205,7 +205,7 @@ const App = () => {
         <RequestCallbackBanner />
         <WhyChooseUs />
         <HomepageReviews />
-        <ExpandingFootprints />
+        {/* <ExpandingFootprints /> */}
       </>
     );
   };

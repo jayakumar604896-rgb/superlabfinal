@@ -1,4 +1,4 @@
-import { ChevronDown, MapPin, Menu, Phone, Search, ShoppingCart, User, X } from 'lucide-react';
+import { ChevronDown, MapPin, Menu, Phone, Search, ShoppingCart, User, X, Download, ExternalLink } from 'lucide-react';
 import { useEffect, useRef, useState } from 'react';
 import { FaWhatsapp } from 'react-icons/fa';
 
@@ -511,6 +511,18 @@ const Header = ({ isIsoModalOpen, setIsIsoModalOpen }) => {
           }
         }
       `}</style>
+      {/* 0. MOBILE ONLY TOP CONTACT BAR */}
+      <div className="mobile-top-contact-bar">
+        <a href="tel:+918939905115" className="mobile-top-contact-btn mobile-call-btn">
+          <Phone size={14} fill="currentColor" />
+          <span>+91 8939905115</span>
+        </a>
+        <a href="https://wa.me/918939905115" target="_blank" rel="noopener noreferrer" className="mobile-top-contact-btn mobile-wa-btn">
+          <FaWhatsapp size={16} />
+          <span>WhatsApp</span>
+        </a>
+      </div>
+
       {/* 1. TOP ROW: Brand Soft Background */}
       <div className="header-top-bar">
         {/* Top Left: Animated Logo Block & ISO badge */}
@@ -1372,21 +1384,69 @@ const Header = ({ isIsoModalOpen, setIsIsoModalOpen }) => {
               <X size={18} />
             </button>
 
-            <h3 className="iso-modal-title" style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--blue)', marginTop: 0, marginBottom: '16px', textAlign: 'center' }}>
-              ISO-15189:2022  Certificate
+            <h3 className="iso-modal-title" style={{ fontSize: '1.25rem', fontWeight: '800', color: 'var(--blue)', marginTop: 0, marginBottom: '4px', textAlign: 'center' }}>
+              ISO 15189:2022 Certificate of Compliance
             </h3>
+            <p style={{ fontSize: '0.85rem', color: '#64748b', marginTop: 0, marginBottom: '16px', textAlign: 'center', fontWeight: '500' }}>
+              Phlebee Healthcare Network Private Limited • Cert No: 101020626
+            </p>
 
-            <img
-              src="/iso-certificate.png"
-              alt="ISO-15189:2022  Certificate"
-              style={{
-                width: '100%',
-                maxHeight: '70vh',
-                objectFit: 'contain',
-                borderRadius: '8px',
-                border: '1px solid var(--line)'
-              }}
-            />
+            <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--line)', backgroundColor: '#f8fafc', padding: '8px' }}>
+              <img
+                src="/iso-certificate.png"
+                alt="ISO 15189:2022 Certificate of Compliance - Phlebee Healthcare Network"
+                style={{
+                  width: '100%',
+                  maxHeight: '65vh',
+                  objectFit: 'contain',
+                  borderRadius: '6px'
+                }}
+              />
+            </div>
+
+            <div style={{ display: 'flex', gap: '12px', marginTop: '16px', width: '100%', justifyContent: 'center', flexWrap: 'wrap' }}>
+              <a
+                href="/iso-certificate.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: 'var(--blue)',
+                  color: '#ffffff',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontSize: '0.85rem',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  transition: 'background-color 0.2s'
+                }}
+              >
+                <Download size={16} /> Download PDF Certificate
+              </a>
+              <a
+                href="https://www.qvcert.co.uk"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: 'inline-flex',
+                  alignItems: 'center',
+                  gap: '8px',
+                  backgroundColor: '#f1f5f9',
+                  color: '#334155',
+                  padding: '8px 16px',
+                  borderRadius: '8px',
+                  fontSize: '0.85rem',
+                  fontWeight: '600',
+                  textDecoration: 'none',
+                  border: '1px solid #cbd5e1',
+                  transition: 'background-color 0.2s'
+                }}
+              >
+                <ExternalLink size={16} /> Verify on QVCert.co.uk
+              </a>
+            </div>
           </div>
         </div>
       )}
