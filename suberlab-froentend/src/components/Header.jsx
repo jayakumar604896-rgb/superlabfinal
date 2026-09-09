@@ -1393,7 +1393,7 @@ const Header = ({ isIsoModalOpen, setIsIsoModalOpen }) => {
 
             <div style={{ width: '100%', display: 'flex', justifyContent: 'center', overflow: 'hidden', borderRadius: '12px', border: '1px solid var(--line)', backgroundColor: '#f8fafc', padding: '8px' }}>
               <img
-                src="/iso-certificate.png"
+                src="/iso-certificate.png?v=20260909"
                 alt="ISO 15189:2022 Certificate of Compliance - Phlebee Healthcare Network"
                 style={{
                   width: '100%',
@@ -1406,7 +1406,7 @@ const Header = ({ isIsoModalOpen, setIsIsoModalOpen }) => {
 
             <div style={{ display: 'flex', gap: '12px', marginTop: '16px', width: '100%', justifyContent: 'center', flexWrap: 'wrap' }}>
               <a
-                href="/iso-certificate.pdf"
+                href="/iso-certificate.pdf?v=20260909"
                 target="_blank"
                 rel="noopener noreferrer"
                 style={{
